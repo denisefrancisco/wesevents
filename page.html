@@ -6,22 +6,32 @@
         <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
         <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-        <script src="/Users/cfrancisco/Documents/Digital Wesleyan 2015/wesevents/page_function.js">
+        <script src="../../wesevents/page_function.js">
         </script>
     </head>
     <body>
+
 
         <div data-role="page" id="homePage">      
             <div data-role="header">         
                 <h1>
                     Wes Events
+                    <div data-role="footer">        
+                        <div data-role="navbar">
+                            <ul>
+                                <li><a href="#">One</a></li>
+                                <li><a href="#">Two</a></li>
+                                <li><a href="#">Three</a></li>
+                            </ul>
+                        </div><!-- /navbar -->
+                    </div><!-- /footer -->
                 </h1>     
             </div>
 
 
         <div data-role="main" class="ui-content">
-            <p id = "text">Wes Events</p>
-            <a href = "#secondPage" data-role = "button">button</a>
+            <p id = "text">Listed Below are the current Wesleyan Events:</p>
+            <a href = "#secondPage" data-role = "button">Add An Event</a>
         </div>
 
         <div data-role="footer">

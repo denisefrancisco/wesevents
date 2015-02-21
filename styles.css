@@ -3,9 +3,13 @@
   height: 41px;   
 }
 #page2 .ui-header h1 {
-  font-size: 2em;   
+  font-size: 1em;   
 }
 
 #homePage {
     font-size: 2em
+}
+
+#text {
+    font-size: 50%;
 }
