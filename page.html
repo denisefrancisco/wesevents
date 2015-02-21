@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script>
+            function changeTheText(){
+                $("#text").append("<button data-role = 'button'>Hello World!</button>");
+            }
+        </script>
+    </head>
+    <body>
+
+        <div data-role="page" id = "homeScreen">
+            <div data-role="header">
+                <h1>Welcome To My Homepage</h1>
+            </div>
+
+        <div data-role="main" class="ui-content">
+            <p id = "text">I Am Now A Mobile Developer!!</p>
+            <a href = "#secondPage" data-role = "button">button</a>
+        </div>
+
+        <div data-role="footer">
+            <h1>Footer Text</h1>
+        </div>
+        </div>
+
+        <div data-role="page" id = "secondPage">
+            <div data-role="header">
+                <h1>Welcome To My Homepage</h1>
+            </div>
+
+        <div data-role="main" class="ui-content">
+            <p>This is the second page</p>
+            <button onclick = "changeTheText()">Change the Text</button>
+            <a href ="#homeScreen" data-role = "button">Home Page</a>
+
+        </div>
+
+        <div data-role="footer">
+            <h1>Footer Text</h1>
+        </div>
+        </div>
+
+
+    </body>
+</html>
+
