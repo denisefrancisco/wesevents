@@ -3,6 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
         <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <script src="/Users/cfrancisco/Documents/Digital Wesleyan 2015/wesevents/page_function.js">
@@ -10,10 +11,13 @@
     </head>
     <body>
 
-        <div data-role="page" id = "homeScreen">
-            <div data-role="header">
-                <h1>Wes Events</h1>
+        <div data-role="page" id="homePage">      
+            <div data-role="header">         
+                <h1>
+                    Wes Events
+                </h1>     
             </div>
+
 
         <div data-role="main" class="ui-content">
             <p id = "text">Wes Events</p>
@@ -33,7 +37,7 @@
         <div data-role="main" class="ui-content">
             <p>This is the second page</p>
             <button onclick = "changeTheText()">Change the Text</button>
-            <a href ="#homeScreen" data-role = "button">Home Page</a>
+            <a href ="#homePage" data-role = "button">Home Page</a>
 
         </div>
 
