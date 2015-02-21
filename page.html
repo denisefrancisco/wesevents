@@ -32,7 +32,7 @@
 
         <div data-role="main" class="ui-content">
             <p id = "text">Listed Below are the current Wesleyan Events:</p>
-            <a href = "#secondPage" data-role = "button">Add An Event</a>
+            <a href = "#secondPage" data-role = "button">Create Event</a>
         </div>
 
          <ul data-role="listview">
@@ -51,19 +51,49 @@
 
         <div data-role="page" id = "secondPage">
             <div data-role="header">
-                <h1>Welcome To My Homepage</h1>
+                <h1>Create Event</h1>
             </div>
 
          
 
         <div data-role="main" class="ui-content">
             <p>This is the second page</p>
-            <button onclick = "changeTheText()">Change the Text</button>
             <a href ="#homePage" data-role = "button">Home Page</a>
 
         </div>
 
+        <form>
+            <div class="ui-field-contain">
+                <label for="text-14">Name:</label>
+                <input type="text" data-mini="true" name="text-14" id="text-14"
+            </div>
+            <div class="ui-field-contain">
+                <label for="text-14">Time/Date:</label>
+                <input type="text" data-mini="true" name="text-14" id="text-14"
+            </div>
+            <div class="ui-field-contain">
+                <label for="text-14">Place:</label>
+                <input type="text" data-mini="true" name="text-14" id="text-14"
+            </div>
+            <div class="ui-field-contain">
+                <label for="text-14">Hosted By:</label>
+                <input type="text" data-mini="true" name="text-14" id="text-14"
+            </div>
+            <div class="ui-field-contain">
+                <label for="text-14">Description:</label>
+                <input type="text" data-mini="true" name="text-14" id="text-14"
+            </div>
+            <div class="ui-field-contain">
+                <label for="text-14">Tags:</label>
+                <input type="text" data-mini="true" name="text-14" id="text-14"
+            </div>
+        </form>
 
+        <div data-role="main" class="ui-content">
+            <a href="#" class="ui-btn">Create</a>
+        </div>
+
+        
 
 
         <div data-role="footer">
