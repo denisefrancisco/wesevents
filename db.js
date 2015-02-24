@@ -2,7 +2,9 @@
 var Firebase = require("firebase");
 /*var myFirebaseRef = new Firebase("https://wesevents.firebaseio.com/");
 
-myFirebaseRef.set({
+
+var Events = myFirebaseRef.child("events"); //attemps to create a "list" of events and each item is called a child.
+Events.set({
     title: "Hello World!",
     author: "Firebase",
     location: {
@@ -12,6 +14,7 @@ myFirebaseRef.set({
     }
 });
 
+<<<<<<< HEAD
 myFirebaseRef.child("location/city").on("value", function(snapshot) {
     alert(snapshot.val()); //Alerts "San Francisco"
 });*/
@@ -23,3 +26,12 @@ ref.on("value", function(snapshot) {
 }, function (errorObject) {
   console.log("The read failed: " + errorObject.code);
 });
+
+//Attaching asynchronous callback to read data (callbacks handle events)
+myFirebaseRef.on("value", function(snapshot) {
+  console.log(snapshot.val());
+}, function (errorObject) {
+  console.log("The read failed: " + errorObject.code);
+});
+
+
