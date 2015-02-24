@@ -14,6 +14,11 @@ Events.set({
     }
 });
 
+
+myFirebaseRef.child("location/city").on("value", function(snapshot) {
+    alert(snapshot.val()); //Alerts "San Francisco"
+});
+
 //Attaching asynchronous callback to read data (callbacks handle events)
 myFirebaseRef.on("value", function(snapshot) {
   console.log(snapshot.val());
@@ -21,6 +26,4 @@ myFirebaseRef.on("value", function(snapshot) {
   console.log("The read failed: " + errorObject.code);
 });
 
-//myFirebaseRef.child("location/city").on("value", function(snapshot) {
-    //alert(snapshot.val()); //Alerts "San Francisco"
-//});
+
