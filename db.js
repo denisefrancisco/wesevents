@@ -1,29 +1,31 @@
-//javascript database handling and creating the firebase database
-var Firebase = require("firebase");
-var myFirebaseRef = new Firebase("https://wesevents.firebaseio.com/");
 
+myFirebaseRef = new Firebase("https://wesevents.firebaseio.com");
+$( document ).ready(function() {
+  var eventHandle = myFirebaseRef.child("events"); //attemps to create a "list" of events and each item is called a child.
 
-var Events = myFirebaseRef.child("events"); //attemps to create a "list" of events and each item is called a child.
-Events.set({
-    title: "Hello World!",
-    author: "Firebase",
-    location: {
-        city: "San Francisco",
-        state: "California",
-        zip: 94103
+  eventHandle.set({
+    alanisawesome: {
+      date_of_birth: "June 23 1912",
+      full_name: "Alan Turing"
+    },
+    gracehop: {
+      date_of_birth: "December 9, 1906",
+      full_name: "Grace Hopper"
     }
+  });
+  console.log( "ready!" );
 });
 
+$("#homePage").onclick(function() {
+  
+}
 
-myFirebaseRef.child("location/city").on("value", function(snapshot) {
-    alert(snapshot.val()); //Alerts "San Francisco"
-});
 
-//Attaching asynchronous callback to read data (callbacks handle events)
-myFirebaseRef.on("value", function(snapshot) {
-  console.log(snapshot.val());
-}, function (errorObject) {
-  console.log("The read failed: " + errorObject.code);
-});
+
+
+
+
+
+
 
 
