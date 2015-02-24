@@ -7,7 +7,7 @@
         <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
-        <script src="../wesevents/page_function.js">
+       <script src="../wesevents/page_function.js">
         </script>
         <script src='https://cdn.firebase.com/js/client/2.0.4/firebase.js'></script>
     </head>
@@ -30,51 +30,79 @@
             </div>
 
 
-        <div data-role="main" class="ui-content">
-            <p id = "text">Listed Below are the current Wesleyan Events:</p>
-            <a href = "#secondPage" data-role = "button">Add An Event</a>
-        </div>
+            <div data-role="main" class="ui-content">
+                <p id = "text">Listed Below are the current Wesleyan Events:</p>
+                <a href = "#secondPage" data-role = "button">Create Event</a>
+                <a href = "#masterList" data-role = "button">See All Events</a>
 
-         <ul data-role="listview">
-            <li><a href="#">Acura</a></li>
-            <li><a href="#">Acura</a></li>
-            <li><a href="#">Acura</a></li>
-            <li><a href="#">Acura</a></li>
-        </ul>  
-       
+            </div>
 
 
-        <div data-role="footer">
-            <h1>Footer Text</h1>
-        </div>
+
+
+            <div data-role="footer">
+                <h1>Footer Text</h1>
+            </div>
         </div>
 
         <div data-role="page" id = "secondPage">
             <div data-role="header">
-                <h1>Welcome To My Homepage</h1>
+                <h1>Create Event</h1>
             </div>
 
          
 
+
+        <!---<div data-role="main" class="ui-content">
+            <a href="#" class="ui-btn">Create</a>
+        </div>--> 
         <div data-role="main" class="ui-content">
             <p>This is the second page</p>
-            <button onclick = "changeTheText()">Change the Text</button>
             <a href ="#homePage" data-role = "button">Home Page</a>
 
+        </div data-role="main" class="ui-content">
+            <label for="text-14">Name:</label>
+            <input type="text" data-mini="true" name="text-14" id="text-14"
+       
+            <label for="text-14">Time/Date:</label>
+            <input type="text" data-mini="true" name="text-14" id="text-14"
+    
+            <label for="text-14">Place:</label> 
+            <input type="text" data-mini="true" name="text-14" id="text-14"
+  
+            <label for="text-14">Hosted By:</label>
+            <input type="text" data-mini="true" name="text-14" id="text-14"
+ 
+            <label for="text-14">Description:</label>
+            <input type="text" data-mini="true" name="text-14" id="text-14"
+        
+            <label for="text-14">Tags:</label>
+            <input type="text" data-mini="true" name="text-14" id="text-14">
         </div>
 
 
 
+        <div data-role = "page" id = "masterList">
+            <div data-role = "header"></div>
 
-        <div data-role="footer">
-            <h1>Footer Text</h1>
+            <a href ="#homePage" data-role = "button">Home Page</a>
+
+            <div data-role = "main" class="ui-content">
+                <p> List of Events</p>
+
+                    <ul data-role="listview">
+                        <li><a href="#">Event 1</a></li>
+                        <li><a href="#">Event 2</a></li>
+                        <li><a href="#">Event 3</a></li>
+                        <li><a href="#">Event 4</a></li>
+                    </ul>
+            </div>
+
+
+            <div data-role="footer">
+                <h1>Footer Text</h1>
+            </div>
         </div>
-
-
-        </div>
-
-
-
 
     </body>
 </html>

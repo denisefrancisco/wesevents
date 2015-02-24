@@ -1,6 +1,6 @@
 //javascript database handling and creating the firebase database
 var Firebase = require("firebase");
-/*var myFirebaseRef = new Firebase("https://wesevents.firebaseio.com/");
+var myFirebaseRef = new Firebase("https://wesevents.firebaseio.com/");
 
 
 var Events = myFirebaseRef.child("events"); //attemps to create a "list" of events and each item is called a child.
@@ -14,7 +14,7 @@ Events.set({
     }
 });
 
-<<<<<<< HEAD
+
 myFirebaseRef.child("location/city").on("value", function(snapshot) {
     alert(snapshot.val()); //Alerts "San Francisco"
 });*/
