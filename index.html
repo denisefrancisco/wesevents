@@ -8,9 +8,8 @@
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
         <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
-       <script src="../wesevents/page_function.js">
-       </script>
-       <script src="../wesevents/db.js"></script>
+        <script src="../wesevents/page_function.js"></script>
+        <script src="../wesevents/db.js"></script>
         
         
     </head>
@@ -80,9 +79,10 @@
             <label for="text-14">Tags:</label>
             <input type="text" data-mini="true" name="text-14" id="text-14">
 
-            <div data-role="main" class="ui-content">
-                <a href="#masterList" class="ui-btn">Submit</a>
-            </div> 
+            <!--<div class="ui-content" class="ui-btn">-->
+                <!--<a href="#masterList">Submit</a>-->
+            <button onclick = "submitEvent()" id = "createEvent">Submit</button>
+            <!--</div>--> 
         </div>
 
 

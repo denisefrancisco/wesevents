@@ -13,12 +13,12 @@ $( document ).ready(function() {
       full_name: "Grace Hopper"
     }
   });
-  console.log( "ready!" );
+  console.log( "ready!" )
 });
 
-$("#homePage").onclick(function() {
-  
-}
+$( "#createPage" ).click(function() {
+  alert("handler for .click() called");
+});
 
 
 
