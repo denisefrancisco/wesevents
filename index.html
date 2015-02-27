@@ -4,9 +4,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
         <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../wesevents/static/js/datetimepicker-master/jquery.datetimepicker.css"/ >
         <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+        <script src="../wesevents/static/js/datetimepicker-master/jquery.js"></script>
+        <script src="../wesevents/static/js/datetimepicker-master/jquery.datetimepicker.js">
+        </script>
         <script src="../wesevents/node_modules/requirejs/require.js"></script>
         <script src="../wesevents/page_function.js"></script>
         <script src="../wesevents/db.js"></script>
@@ -62,7 +66,7 @@
             <input type="text" data-mini="true" name="text-14" id="name"
        
             <label for="text-14">Time/Date:</label>
-            <input type="text" data-mini="true" name="text-14" id="time"
+            <input type="text" data-mini="true" name="text-14" id="datetimepicker"
     
             <label for="text-14">Place:</label> 
             <input type="text" data-mini="true" name="text-14" id="place"
@@ -92,12 +96,9 @@
             <div data-role = "main" class="ui-content">
                 <p> List of Events</p>
 
-                    <!-- <ul data-role="listview">
-                        <li><a href="#">Event 1</a></li>
-                        <li><a href="#">Event 2</a></li>
-                        <li><a href="#">Event 3</a></li>
-                        <li><a href="#">Event 4</a></li>
-                    </ul> -->
+                    <ul data-role="listview" id="eventList">
+                        <!-- <li><a href="#">Event 1</a></li> -->
+                    </ul>
             </div>
 
 
