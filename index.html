@@ -6,7 +6,6 @@
         <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
         <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-        <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
         <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
         <script src="../wesevents/page_function.js"></script>
         <script src="../wesevents/db.js"></script>
@@ -30,7 +29,7 @@
                 <button data-role="ui-btn">Entertainment</button>
                 <button data-role="ui-btn">Student Groups</button>
                 <button data-role="ui-btn">Academics</button>
-                <button data-role="ui-btn">Career &amp; Business</button>
+                <button data-role="ui-btn">Career Business</button>
                 <button data-role="ui-btn">Nightlife</button>
                 <a href = "#masterList" data-role = "button">See All Events</a>
 
@@ -83,7 +82,7 @@
 
 
 
-        <div data-role = "page" id = "masterList" onload = "get_events()">
+        <div data-role = "page" id = "masterList">
             <div data-role = "header"></div>
 
             <a href ="#homePage" data-role = "button">Home Page</a>
@@ -91,12 +90,12 @@
             <div data-role = "main" class="ui-content">
                 <p> List of Events</p>
 
-                    <ul data-role="listview">
+                    <!-- <ul data-role="listview">
                         <li><a href="#">Event 1</a></li>
                         <li><a href="#">Event 2</a></li>
                         <li><a href="#">Event 3</a></li>
                         <li><a href="#">Event 4</a></li>
-                    </ul>
+                    </ul> -->
             </div>
 
 
