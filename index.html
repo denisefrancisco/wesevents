@@ -124,7 +124,37 @@
         <div data-role="page" id="submitPage">      
             <div data-role="header">         
                 <h1>
-                    Wes Events</h1>     
+                    Wes Events</h1>  
+                <script>
+                    function submitEvent(){
+                    console.log("weeee");
+                    var myFirebaseRef = new Firebase("https://wesevents.firebaseio.com");
+                    var names = document.getElementById("name").value;
+                    var times = document.getElementById("datetimepicker").value;
+                    var places = document.getElementById("place").value;
+                    var host = document.getElementById("creator").value;
+                    var description = document.getElementById("description").value;
+                    var tags = document.getElementById("tags").value;
+
+                    
+                    myFirebaseRef.push({names:names, place: places, time: times, creator: host, description: description, tag: tags});
+
+                console.log(names);
+
+                }
+
+                function display(){
+                    $('<div/>').text(places).prepend($('<em/>').text(names+': ')).appendTo($('#messagesDiv'));
+                }
+
+                myFirebaseRef.on("value", function(snapshot) {
+                    console.log(snapshot.val());
+                }, function (errorObject) {
+                    console.log("The read failed: " + errorObject.code);
+                });
+
+
+                </script>  
             </div>
 
             <p>you have submitted an event!</p>
