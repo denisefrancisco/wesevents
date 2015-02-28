@@ -3,62 +3,23 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-        <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
-        <link rel="stylesheet" href="../wesevents/styles.css"/>
-        <link rel="stylesheet" href="../wesevents/foundation-5.5.1/css/foundation.css"/>
+        <link rel="stylesheet" href="../wesevents/static/styles.css" media="screen" />
         <link rel="stylesheet" type="text/css" href="../wesevents/static/js/datetimepicker-master/jquery.datetimepicker.css"/ >
         <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-        
-        <script src="../wesevents/foundation-5.5.1/js/vendor/jquery.js"></script>
-        <script src="../wesevents/foundation-5.5.1/js/foundation.min.js"></script>
-        <script src="../wesevents/foundation-5.5.1/js/vendor/modernizr.js"></script>
-        <script src="../wesevents/foundation-5.5.1/js/vendor/fastclick.js"></script>
         <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
-        <script src="../wesevents/static/js/datetimepicker-master/jquery.js"></script>
         <script src="../wesevents/static/js/datetimepicker-master/jquery.datetimepicker.js">
         </script>
         <script src="../wesevents/node_modules/requirejs/require.js"></script>
         <script src="../wesevents/page_function.js"></script>
         <script src="../wesevents/db.js"></script>
 
+
         
         
     </head>
     <body>
-
-
-
-        <div data-role="page" id="homePage">      
-            <nav class="top-bar" data-topbar role="navigation">
-              <ul class="title-area">
-                <li class="name">
-                  <h3><a href="#">My Site</a></h3>
-                </li>
-                 <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-                <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-              </ul>
-
-              <section class="top-bar-section">
-                <!-- Right Nav Section -->
-                <ul class="right">
-                  <li class="active"><a href="#">Right Button Active</a></li>
-                  <li class="has-dropdown">
-                    <a href="#">Right Button Dropdown</a>
-                    <ul class="dropdown">
-                      <li><a href="#">First link in dropdown</a></li>
-                      <li class="active"><a href="#">Active link in dropdown</a></li>
-                    </ul>
-                  </li>
-                </ul>
-
-                <!-- Left Nav Section -->
-                <ul class="left">
-                  <li><a href="#">Left Nav Button</a></li>
-                </ul>
-              </section>
-            </nav>
-
+        <div data-role="page" id="homePage">
             <div data-role = "header">
                 <h1>Wes Events</h1>
             </div>
@@ -66,14 +27,13 @@
 
 
             <div data-role="main" class="ui-content">
-                <p id = "text">Choose what you want to do!</p>
-                <a href = "#secondPage" data-role = "button">Create Event</a>
-                <button data-role="ui-btn">Entertainment</button>
-                <button data-role="ui-btn">Student Groups</button>
-                <button data-role="ui-btn">Academics</button>
-                <button data-role="ui-btn">Career Business</button>
-                <button data-role="ui-btn">Nightlife</button>
-                <a href = "#masterList" data-role = "button">See All Events</a>
+                    
+                    <ul data-role="listview" data-theme="g">
+                        <li><a href="#masterList">See All Events</a></li>
+                        <li><a href="#secondPage">Create an Event</a></li>
+                        
+
+                    </ul>
             </div>
 
 
@@ -121,14 +81,18 @@
             <!--</div>--> 
         </div>
         <!--creating event new-->
-        <div data-role="page" id="submitPage">      
+
+        <div data-role="page" id="descriptionPage">
+            <p> WEEE </p>
+        </div> 
+
             <div data-role="header">         
                 <h1>
                     Wes Events</h1>  
                 <script>
-                    function submitEvent(){
+                function submitEvent(){
                     console.log("weeee");
-                    var myFirebaseRef = new Firebase("https://wesevents.firebaseio.com");
+                    var eventHandle = myFirebaseRef.child("events");
                     var names = document.getElementById("name").value;
                     var times = document.getElementById("datetimepicker").value;
                     var places = document.getElementById("place").value;
@@ -137,21 +101,12 @@
                     var tags = document.getElementById("tags").value;
 
                     
-                    myFirebaseRef.push({names:names, place: places, time: times, creator: host, description: description, tag: tags});
+                    eventHandle.push({names:names, place: places, time: times, creator: host, description: description, tag: tags});
 
                 console.log(names);
 
-                }
 
-                function display(){
-                    $('<div/>').text(places).prepend($('<em/>').text(names+': ')).appendTo($('#messagesDiv'));
                 }
-
-                myFirebaseRef.on("value", function(snapshot) {
-                    console.log(snapshot.val());
-                }, function (errorObject) {
-                    console.log("The read failed: " + errorObject.code);
-                });
 
 
                 </script>  
@@ -178,8 +133,6 @@
             <a href ="#homePage" data-role = "button">Home Page</a>
 
             <div data-role = "main" class="ui-content">
-                <p> List of Events</p>
-
                     <ul data-role="listview" id="eventList">
                         <!-- <li><a href="#">Event 1</a></li> -->
                     </ul>

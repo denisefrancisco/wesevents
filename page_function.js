@@ -12,25 +12,38 @@ function submitEvent(){
         var tags = document.getElementById("tags").value;
         console.log(names);
         console.log(times);
-        
+
     }
 
 //using the Wesleyan API for current events
-$("#masterList").ready(function() {
-    console.log("hi");
+$(document).on("pagebeforeshow","#masterList",function() {
+    var elist = $("#eventList");
+    elist.html('');
+
     $.getJSON("http://wesapi.org/api/events/today", function(res) {
 
         if (!(res)) {
             console.log("No response");
         } else {
             console.log("Got response");
-            var elist = $("#eventList");
+            
             res.Results.forEach(function(event){
-                elist.append("<li><a href='#'>"+ event.name + "</a></li>");  
+                elist.append("<li><a href='#descriptionPage' data-role = 'button'>"+ event.name + "</a></li>");  
 
             });
             console.log(res);
+            elist.listview("refresh");
         }
+
+        myFirebaseRef.on("value", function(snapshot) {
+            console.log(snapshot.val());
+            $.each(snapshot.val().events, function(key, event) {
+                elist.append("<li><a href='#descriptionPage' data-role = 'button'>"+ event.names + "</a></li>");  
+            });
+            elist.listview("refresh");
+        }, function (errorObject) {
+            console.log("The read failed: " + errorObject.code);
+        });
 
     console.log("YES IT WORKED!!!!!");
     });
@@ -40,7 +53,7 @@ $("#masterList").ready(function() {
 
 window.onload = function() {
     jQuery('#datetimepicker').datetimepicker();
-    elist.listview("refresh");
+
 }
 
 
