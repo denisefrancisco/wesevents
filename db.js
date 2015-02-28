@@ -15,6 +15,7 @@ $( document ).ready(function() {
   console.log( "ready!" )
 
 
+
   //creating data in firebase for names
 });
 

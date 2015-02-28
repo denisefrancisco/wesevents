@@ -12,6 +12,7 @@ function submitEvent(){
         var tags = document.getElementById("tags").value;
         console.log(names);
         console.log(times);
+        
     }
 
 //using the Wesleyan API for current events
