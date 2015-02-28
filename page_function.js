@@ -29,7 +29,6 @@ $("#masterList").ready(function() {
 
             });
             console.log(res);
-            elist.listview("refresh");
         }
 
     console.log("YES IT WORKED!!!!!");
@@ -40,6 +39,7 @@ $("#masterList").ready(function() {
 
 window.onload = function() {
     jQuery('#datetimepicker').datetimepicker();
+    elist.listview("refresh");
 }
 
 
