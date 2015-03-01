@@ -32,7 +32,7 @@ $(document).on("pagebeforeshow","#masterList",function() {
                 var where = "<b> Place: </b>"
                 var time = "<b> Time: </b>"
                 var descript ="<b> Description: </b>"
-                var collapsible = "<div data-role ='collapsible'><h3> " + event.name +  "</h3> <p>" + what + event.name + "<br>" + "<br>" + where + 
+                var collapsible = "<div data-role ='collapsible' style='font-family: 'Lucida Sans Unicode';'><h3> " + event.name +  "</h3> <p>" + what + event.name + "<br>" + "<br>" + where + 
                                 event.location + "<br>" + "<br>" + time + event.time + "<br>" + "<br>" + descript + event.description + "<br>" +"</p></div>";
                 elist.append($(collapsible).collapsible());
 
