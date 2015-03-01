@@ -21,8 +21,8 @@
         
     </head>
     <body>
-        <div data-role="page" id="homePage">
-            <div data-role = "header">
+        <div data-role="page" id="homePage" data-theme="b">
+            <div data-role = "header"  style="font-size: 2em; font-family: 'Trebuchet MS'; color: #EB4646;">
                 <h1>Wes Events</h1>
             </div>
 
@@ -41,8 +41,8 @@
 
 
 
-            <div data-role="footer">
-                <h1>Footer Text</h1>
+            <div data-role="footer" style="font-size: 0.35em; font-family: 'Trebuchet MS'; color: #F36B6B;">
+                <h1>Created by: Donovan Brady, Mia Deng, Yaoqi Dong, Katya Sapozhnina, Denise Francisco</h1>
             </div>
         </div>
 
@@ -55,11 +55,9 @@
         <div data-role="main" class="ui-content"> 
             <a href ="#homePage" data-role = "button" data-theme="c">Home Page</a>
 
-<<<<<<< HEAD
-        </div data-role="main" class="ui-content" >
-            <label for="text-14">Name:</label>
-            <input type="text" data-mini="true" name="text-14" id="name"
-=======
+
+
+
 
         </div data-role="main" class="ui-content">
             <style>
@@ -70,7 +68,7 @@
 
             <p>Name:</p>
             <input type="text" data-mini="true" name="text-14" id="name">
->>>>>>> a79598ad7d5fc78f3ad6fac43831108498188c1c
+
        
             <p>Time/Date:</p>
             <input type="text" data-mini="true" name="text-14" id="datetimepicker">
@@ -90,16 +88,15 @@
             <!--<div class="ui-content" class="ui-btn">-->
                 <!--<a href="#masterList">Submit</a>-->
             <!--<button onclick = "submitEvent()" id = "createEvent">Submit</button>-->
-<<<<<<< HEAD
-            <fieldset class="ui-grid-a">
-                <div align="center">
+
+            <fieldset class="ui-grid-a center">
+                <div class="ui-block-a">
+                    <div align="center">
                     <a href = "#submitting" class="ui-shadow ui-btn ui-corner-all  "onclick = "submitEvent()" data-role = "button" data-mini = "true" style="background:green;">Submit</a>
+                </div>
                 </div>
             </fieldset>
 
-=======
-            <a href = "#submitPage" onclick = "submitEvent()" data-role = "button">Submit</a>
->>>>>>> a79598ad7d5fc78f3ad6fac43831108498188c1c
 
             <!--</div>--> 
         </div>
@@ -130,44 +127,34 @@
 
                 </script>  
             </div>
+            <div data-role = "page" id = "submitting" data-theme= "b">
+                <div align = "center">
+                    <p>You have created an event!</p>
+                </div>
+                    <a href = "#masterList" data-role = "button">See All Events</a>
 
-            <p>you have submitted an event!</p>
-            <a href = "#masterList" data-role = "button">See All Events</a>
 
-
-
-
-
-            <div data-role="footer">
-                <h1>Footer Text</h1>
             </div>
-        </div>
 
 
 
-<<<<<<< HEAD
         <!--start of page-->
         <div data-role = "page" id = "masterList" data-theme="b">
             <div data-role = "header" style="font-size: 4em; font-family: 'Trebuchet MS'; color: #EB4646;">
                 <h1> Events </h1>
             </div>
-=======
 
-        <div data-role = "page" id = "masterList">
-            <div data-role = "header"></div>
->>>>>>> a79598ad7d5fc78f3ad6fac43831108498188c1c
 
             <a href ="#homePage" data-role = "button" style="font-family: 'Lucida Sans Unicode';">Home Page</a>
 
-<<<<<<< HEAD
                 
 
 
             
             <div data-role="collapsibleset" id = "eventList" style="font-family: 'Lucida Sans Unicode';">
-=======
-            <div data-role="collapsibleset" id = "eventList" >
->>>>>>> a79598ad7d5fc78f3ad6fac43831108498188c1c
+
+
+
                 <!--
                 <div data-role="collapsible" >
                     <h3>Section 1</h3>
@@ -179,9 +166,7 @@
         </div>
 
 
-            <div data-role="footer">
-                <h1>Footer Text</h1>
-            </div>
+
         </div>
 
     </body>
