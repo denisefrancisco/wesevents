@@ -22,7 +22,7 @@
         
     </head>
     <body>
-        <div data-role="page" id="homePage">
+        <div data-role="page" id="homePage" data-theme="b">
             <div data-role = "header">
                 <h1>Wes Events</h1>
             </div>
@@ -79,15 +79,12 @@
             <!--<div class="ui-content" class="ui-btn">-->
                 <!--<a href="#masterList">Submit</a>-->
             <!--<button onclick = "submitEvent()" id = "createEvent">Submit</button>-->
-            <a href = "#submitPage" onclick = "submitEvent()" data-role = "button">Submit</a>
+            <a href = "#submitting" onclick = "submitEvent()" data-role = "button">Submit</a>
 
             <!--</div>--> 
         </div>
         <!--creating event new-->
 
-        <div data-role="page" id="descriptionPage">
-            <p> WEEE </p>
-        </div> 
 
             <div data-role="header">         
                 <h1>
@@ -115,6 +112,9 @@
                 </script>  
             </div>
 
+
+        <div data-role = "page" id="submitting">
+
             <p>you have submitted an event!</p>
             <a href = "#masterList" data-role = "button">See All Events</a>
 
@@ -131,7 +131,9 @@
 
         <!--start of page-->
         <div data-role = "page" id = "masterList">
-            <div data-role = "header"></div>
+            <div data-role = "header">
+                <h1> Events </h1>
+            </div>
 
             <a href ="#homePage" data-role = "button">Home Page</a>
 
