@@ -17,13 +17,12 @@
         <script src="../wesevents/db.js"></script>
 
 
-
         
         
     </head>
     <body>
-        <div data-role="page" id="homePage" data-theme="b">
-            <div data-role = "header" class="headers" style="font-size:2em; color: #EB4646; font-family: 'Trebuchet MS';">
+        <div data-role="page" id="homePage">
+            <div data-role = "header">
                 <h1>Wes Events</h1>
             </div>
 
@@ -32,8 +31,8 @@
             <div data-role="main" class="ui-content">
                     
                     <ul data-role="listview" data-theme="g">
-                        <a href="#masterList" data-role="button" style="font-family: 'Lucida Sans Unicode';">See All Events</a>
-                        <a href="#secondPage" data-role="button" style="font-family: 'Lucida Sans Unicode';">Create an Event</a>
+                        <li><a href="#masterList">See All Events</a></li>
+                        <li><a href="#secondPage">Create an Event</a></li>
                         
 
                     </ul>
@@ -42,8 +41,8 @@
 
 
 
-            <div data-role="footer" data-theme="b">
-                <h6 id="footer" style="color: #F28585; font-family: 'Lucida Sans Unicode'; font-size: 0.3em;">Created by: Donovan Brady, Mia Deng, Yaoqi Dong, Katya Sapozhnina, and Denise Francisco</h6>
+            <div data-role="footer">
+                <h1>Footer Text</h1>
             </div>
         </div>
 
@@ -56,39 +55,55 @@
         <div data-role="main" class="ui-content"> 
             <a href ="#homePage" data-role = "button" data-theme="c">Home Page</a>
 
+<<<<<<< HEAD
         </div data-role="main" class="ui-content" >
             <label for="text-14">Name:</label>
             <input type="text" data-mini="true" name="text-14" id="name"
+=======
+
+        </div data-role="main" class="ui-content">
+            <style>
+            p {
+                padding: 0.2cm 0.2cm 0cm 0.5cm;
+            }
+            </style>
+
+            <p>Name:</p>
+            <input type="text" data-mini="true" name="text-14" id="name">
+>>>>>>> a79598ad7d5fc78f3ad6fac43831108498188c1c
        
-            <label for="text-14">Time/Date:</label>
-            <input type="text" data-mini="true" name="text-14" id="datetimepicker"
+            <p>Time/Date:</p>
+            <input type="text" data-mini="true" name="text-14" id="datetimepicker">
     
-            <label for="text-14">Place:</label> 
-            <input type="text" data-mini="true" name="text-14" id="place"
+            <p>Place:</p> 
+            <input type="text" data-mini="true" name="text-14" id="place">
   
-            <label for="text-14">Hosted By:</label>
-            <input type="text" data-mini="true" name="text-14" id="creator"
+            <p>Hosted By:</p>
+            <input type="text" data-mini="true" name="text-14" id="creator">
  
-            <label for="text-14">Description:</label>
-            <input type="text" data-mini="true" name="text-14" id="description"
+            <p>Description:</p>
+            <input type="text" data-mini="true" name="text-14" id="description">
         
-            <label for="text-14">Tags:</label>
+            <p>Tags:</p>
             <input type="text" data-mini="true" name="text-14" id="tags">
 
             <!--<div class="ui-content" class="ui-btn">-->
                 <!--<a href="#masterList">Submit</a>-->
             <!--<button onclick = "submitEvent()" id = "createEvent">Submit</button>-->
+<<<<<<< HEAD
             <fieldset class="ui-grid-a">
                 <div align="center">
                     <a href = "#submitting" class="ui-shadow ui-btn ui-corner-all  "onclick = "submitEvent()" data-role = "button" data-mini = "true" style="background:green;">Submit</a>
                 </div>
             </fieldset>
 
+=======
+            <a href = "#submitPage" onclick = "submitEvent()" data-role = "button">Submit</a>
+>>>>>>> a79598ad7d5fc78f3ad6fac43831108498188c1c
 
             <!--</div>--> 
         </div>
         <!--creating event new-->
-
 
             <div data-role="header">         
                 <h1>
@@ -116,9 +131,6 @@
                 </script>  
             </div>
 
-
-        <div data-role = "page" id="submitting">
-
             <p>you have submitted an event!</p>
             <a href = "#masterList" data-role = "button">See All Events</a>
 
@@ -133,19 +145,29 @@
 
 
 
+<<<<<<< HEAD
         <!--start of page-->
         <div data-role = "page" id = "masterList" data-theme="b">
             <div data-role = "header" style="font-size: 4em; font-family: 'Trebuchet MS'; color: #EB4646;">
                 <h1> Events </h1>
             </div>
+=======
+
+        <div data-role = "page" id = "masterList">
+            <div data-role = "header"></div>
+>>>>>>> a79598ad7d5fc78f3ad6fac43831108498188c1c
 
             <a href ="#homePage" data-role = "button" style="font-family: 'Lucida Sans Unicode';">Home Page</a>
 
+<<<<<<< HEAD
                 
 
 
             
             <div data-role="collapsibleset" id = "eventList" style="font-family: 'Lucida Sans Unicode';">
+=======
+            <div data-role="collapsibleset" id = "eventList" >
+>>>>>>> a79598ad7d5fc78f3ad6fac43831108498188c1c
                 <!--
                 <div data-role="collapsible" >
                     <h3>Section 1</h3>
@@ -154,12 +176,13 @@
             -->
     
     
-            </div>
-            </div>
-
-
         </div>
-        <!--<end of page>-->
+
+
+            <div data-role="footer">
+                <h1>Footer Text</h1>
+            </div>
+        </div>
 
     </body>
 
