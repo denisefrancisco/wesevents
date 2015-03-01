@@ -47,17 +47,16 @@
             </div>
         </div>
 
-        <div data-role="page" id = "secondPage">
+        <div data-role="page" id = "secondPage" data-theme="b">
             <div data-role="header">
-                <h1>Create Event</h1>
+                <h1 style="font-size: 3em; font-family: 'Trebuchet MS'; color: #EB4646;">Create Event</h1>
             </div>
 
-        
-        <div data-role="main" class="ui-content">
-            <p>This is the second page</p>
-            <a href ="#homePage" data-role = "button">Home Page</a>
+            
+        <div data-role="main" class="ui-content"> 
+            <a href ="#homePage" data-role = "button" data-theme="c">Home Page</a>
 
-        </div data-role="main" class="ui-content">
+        </div data-role="main" class="ui-content" >
             <label for="text-14">Name:</label>
             <input type="text" data-mini="true" name="text-14" id="name"
        
@@ -79,7 +78,12 @@
             <!--<div class="ui-content" class="ui-btn">-->
                 <!--<a href="#masterList">Submit</a>-->
             <!--<button onclick = "submitEvent()" id = "createEvent">Submit</button>-->
-            <a href = "#submitting" onclick = "submitEvent()" data-role = "button">Submit</a>
+            <fieldset class="ui-grid-a">
+                <div align="center">
+                    <a href = "#submitting" class="ui-shadow ui-btn ui-corner-all  "onclick = "submitEvent()" data-role = "button" data-mini = "true" style="background:green;">Submit</a>
+                </div>
+            </fieldset>
+
 
             <!--</div>--> 
         </div>
@@ -130,18 +134,18 @@
 
 
         <!--start of page-->
-        <div data-role = "page" id = "masterList">
-            <div data-role = "header" style="font-size: 4em;">
+        <div data-role = "page" id = "masterList" data-theme="b">
+            <div data-role = "header" style="font-size: 4em; font-family: 'Trebuchet MS'; color: #EB4646;">
                 <h1> Events </h1>
             </div>
 
-            <a href ="#homePage" data-role = "button">Home Page</a>
+            <a href ="#homePage" data-role = "button" style="font-family: 'Lucida Sans Unicode';">Home Page</a>
 
                 
 
 
             
-            <div data-role="collapsibleset" id = "eventList" >
+            <div data-role="collapsibleset" id = "eventList" style="font-family: 'Lucida Sans Unicode';">
                 <!--
                 <div data-role="collapsible" >
                     <h3>Section 1</h3>
