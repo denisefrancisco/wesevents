@@ -28,9 +28,10 @@ body {
     font-size: 50%;
     font-style: normal;
 }
-.ui-bar-b {
-    font-weight:normal;
-}​
+
+.center-button {
+    margin: 0 auto;
+}
 
 
 
